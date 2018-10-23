@@ -1,0 +1,189 @@
+@charset "UTF-8";
+body {
+  background-color: #02010a;
+  font-family: 'Dancing Script', cursive; }
+
+.container {
+  margin: 0;
+  padding: 0;
+  width: 100%; }
+
+.container div {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  min-width: 150px;
+  padding: 20px; }
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap; }
+
+.header, .imagenCentral, .imagenIzquierda, .imagenDerecha, .contacto, .terminos, .redes-sociales, .derechos {
+  width: 100%; }
+
+/*Estilos barra de navegación
+*/
+.header {
+  background-color: #5b7989;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-animation-name: slidein;
+          animation-name: slidein;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s; }
+
+@-webkit-keyframes slidein {
+  0% {
+    margin-top: 150%; }
+  60% {
+    margin-top: -5%; }
+  100% {
+    margin-top: 0%; } }
+
+@keyframes slidein {
+  0% {
+    margin-top: 150%; }
+  60% {
+    margin-top: -5%; }
+  100% {
+    margin-top: 0%; } }
+.header nav {
+  font-size: 20px; }
+
+.header h1 {
+  text-shadow: 2px 2px #02010a; }
+
+.header ul li {
+  display: inline; }
+
+.header ul li a {
+  color: white; }
+
+#activo {
+  text-decoration: none; }
+
+/*Estilos de Footer
+*/
+.contacto, .terminos, .redes-sociales, .derechos {
+  background-color: #C6d5c5;
+  font-size: 1.1em; }
+
+.contacto a, .redes-sociales a {
+  color: black; }
+
+.derechos {
+  border-bottom-right-radius: 10px; }
+  .imagenCentral {
+    background-color: #82c3a6;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+
+  .imagenCentral img, .imagenIzquierda img, .imagenDerecha img {
+    -webkit-box-shadow: 2px 2px #02010a;
+            box-shadow: 2px 2px #02010a;
+    width: 100%; }
+
+  .imagenIzquierda {
+    color: black;
+    background-color: #9BC1BC; }
+
+  .imagenIzquierda img {
+    -webkit-transition: 1.5s;
+    transition: 1.5s; }
+
+  .imagenIzquierda img:hover {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg); }
+
+  .imagenDerecha {
+    color: black;
+    background-color: #36C9C6; }
+
+  .imagenDerecha img:hover {
+    -webkit-transform: translate(20px, -5px);
+            transform: translate(20px, -5px); }
+
+  .imagenIzquierda, .imagenDerecha {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #d5c75f;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+
+  .imagenIzquierda img, .imagenDerecha img {
+    -webkit-transition: 2s;
+    transition: 2s; }
+
+  .imagenIzquierda img:hover, .imagenDerecha img:hover {
+    -webkit-box-shadow: 2px 2px #82c3a6;
+            box-shadow: 2px 2px #82c3a6; }
+
+  .imagenIzquierda h2, .imagenDerecha h2 {
+    text-align: center; }
+
+  .imagenIzquierda a, .imagenDerecha a {
+    color: black; }
+
+  /*Versión Móvil
+  */
+  @media (min-width: 320px) {
+    div.header {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+
+    .header, .imagenIzquierda, .imagenDerecha {
+      width: 100%; } }
+  /*Versión Desktop*/
+  @media (min-width: 900px) {
+    div.header {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row; }
+
+    .header {
+      width: 100%; }
+
+    .imagenCentral {
+      width: 100%; }
+
+    .imagenIzquierda, .imagenDerecha {
+      width: 50%; }
+
+    .contacto, .terminos, .redes-sociales, .derechos {
+      width: 25%; }
+
+    .container {
+      width: 800px;
+      margin-left: auto;
+      margin-right: auto; }
+
+    .contacto {
+      border-bottom-left-radius: 10px; }
